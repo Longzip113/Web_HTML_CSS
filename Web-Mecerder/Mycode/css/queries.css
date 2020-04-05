@@ -1,0 +1,32 @@
+/* Big tablet to 1200px desktop */
+
+@media only screen and (max-width:1200px) {
+    html {
+        font-size: 16px;
+    }
+    .heading-main-box {
+        transform: translate(-30%, -50%);
+    }
+    form {
+        margin-left: 30%;
+    }
+}
+
+
+/* Samll tablet to big tablet from 768px to 1023px  all Ipat*/
+
+@media only screen and (max-width:1023px) {
+    .about-secton {
+        width: 1023px;
+    }
+}
+
+
+/* Small phones to small tablet  Ipat nho and Iphone*/
+
+@media only screen and (max-width:767px) {}
+
+
+/* Small phones from 0 to 480px  Iphone Nho*/
+
+@media only screen and (max-width:480px) {}

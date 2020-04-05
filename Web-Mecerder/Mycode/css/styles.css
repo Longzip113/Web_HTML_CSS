@@ -1,0 +1,511 @@
+/* ---------------Default setup------------------ */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'lato', sans-serif;
+    /* font-size: mạc định là 16px */
+    font-size: 20px;
+    color: #5a5a5a;
+    background-color: #fff;
+    /* text-rendering: Hiển thị chữ trên websile */
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* --------------END Default setup--------------- */
+
+
+/* ---------------REUSABLE-COMPONENT------------------ */
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    width: 190px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #d35400;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.row {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 300%;
+    font-weight: 400;
+    word-spacing: 5px;
+    color: white;
+    line-height: 150%;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #e67e22;
+    font-size: 100%;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2::after {
+    content: " ";
+    display: block;
+    width: 130px;
+    height: 3px;
+    background-color: #e67e22;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #265077;
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.p-long {
+    text-align: center;
+    color: #265007;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+}
+
+section {
+    padding: 50px;
+}
+
+
+/* --------------END-REUSABLE-COMPONENT--------------- */
+
+
+/* ------------------------Header------------------------ */
+
+header {
+    background-image: linear-gradient(155deg, rgba(2, 33, 64, 0.8) 35%, rgba(12, 123, 147, 0.85)), url(../img/Background4k.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* vh: view height 100 chem het websile */
+    background-attachment: fixed;
+    /* Khi cuôn xuống background không bin cuộn theo */
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+    width: 70px;
+    border-radius: 20%;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 21px;
+    margin-right: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-weight: 700;
+    transition: border-bottom 0.5s;
+    padding: 3px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #cccccc;
+}
+
+.main-nav li {
+    margin-right: 25px;
+}
+
+.heading-main-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1140px;
+}
+
+
+/* -----------------------End Header------------------------ */
+
+
+/* --------Sticky---------- */
+
+.sticky {
+    background-color: rgba(2, 33, 64, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+}
+
+.sticky .logo {
+    width: 70px;
+    margin-top: 2px;
+}
+
+
+/* ---------------About-Section------------------ */
+
+.about-picture {
+    position: relative;
+}
+
+.about-picture img {
+    width: 242px;
+    height: 150px;
+    border-radius: 20px;
+    border: 4px solid #a0acb4;
+    box-shadow: -5px -5px 7px 1px #43549c;
+    /* x - y độ mờ độ rộng màu  */
+    transition: all 0.5s;
+}
+
+.picture-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-65%, 100%);
+    opacity: 0;
+    /*
+    opacity: 0; làm mất 
+    opacity: 1; Hiện ra 
+     */
+}
+
+.about-picture:hover img,
+.about-picture:active img {
+    filter: brightness(70%) blur(2px);
+    /* blur(): làm mờ ảnh 
+      brightness(): Làm tối ảnh tính %
+    */
+}
+
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title {
+    transform: translate(-65%, -50%);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+/* ---------------End About-Section------------------ */
+
+
+/* ---------------Section-Products------------------ */
+
+.products-section {
+    background-color: #f4f4f4;
+}
+
+.products-section h2 {
+    margin-bottom: 60px;
+}
+
+.product-box {
+    background-color: #eeefff;
+    box-shadow: 3px 5px 10px #e0e0e0;
+    width: 90%;
+    height: 350px;
+}
+
+.product-price {
+    color: #265077;
+    font-size: 250%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.picture-price span {
+    font-size: 80%;
+}
+
+.product-box ul li {
+    margin-left: 20%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.small-icon {
+    color: #305679;
+    font-size: 120%;
+    margin-right: 10px;
+}
+
+.product-box .btn {
+    margin-left: 20%;
+}
+
+
+/* ---------------End Section-Product------------------ */
+
+
+/* ---------------Section-Testimonials------------------ */
+
+.testimonials-section {
+    background-image: linear-gradient(155deg, rgba(2, 33, 64, 0.8) 35%, rgba(12, 123, 147, 0.85)), url(../img/BackgroudTestinomal.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 70px;
+}
+
+blockquote {
+    width: 95%;
+    position: relative;
+    font-style: italic;
+    line-height: 140%;
+    color: white;
+}
+
+blockquote::before {
+    content: "\201C";
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+cite {
+    display: block;
+    color: #6b95bd;
+    margin-top: 25px;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #265077;
+    margin-right: 5px;
+}
+
+
+/* ---------------End Section-Testimonials------------------ */
+
+.sponsors-section {
+    background-color: white;
+}
+
+.sponsors-section h2 {
+    margin-bottom: 50px;
+}
+
+.sponsors-showcase {
+    margin-left: 10%;
+}
+
+.sponsors-showcase li {
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-sponsor {
+    width: 140px;
+    transition: all 0.5s;
+}
+
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active {
+    transform: scale(1.2);
+    /* Phong to Img */
+}
+
+figcaption {
+    color: #265077;
+    font-weight: 900;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+
+/* --------------- Section-ConTract - Form------------------ */
+
+.contract-section {
+    background-image: linear-gradient(155deg, rgba(2, 33, 64, 0.8) 35%, rgba(12, 123, 147, 0.85)), url(../img/Footer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.information {
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 70px;
+    word-spacing: 1px;
+    font-size: 95%;
+}
+
+.information .small-icon {
+    color: #427db4;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active {
+    transform: scale(1.3);
+}
+
+.social-icon {
+    margin-top: 50px;
+    list-style: none;
+}
+
+.social-icon li {
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+}
+
+.social-icon li i {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.social-icon li i:hover,
+.social-icon li i:active {
+    transform: scale(1.3);
+    color: #265007;
+}
+
+
+/* Form */
+
+form {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 40%;
+    width: 68%;
+    padding: 20px;
+}
+
+form .row {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 150%;
+    color: white;
+}
+
+input,
+textarea {
+    margin-left: -222px;
+    outline: none;
+    padding: 10px;
+    background-color: rgba(47, 47, 47, 0.3);
+    border: 1px solid rgba(70, 68, 68, 0.7);
+    cursor: pointer;
+    border-radius: 5%;
+    width: 250px;
+}
+
+textarea {
+    resize: none;
+    /* Bỏ ba gạch phí góc của textarea  */
+    height: 150px;
+}
+
+input {
+    height: 50px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 250px;
+    font-size: 100%;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    color: white;
+    background-color: rgba(48, 47, 47, 0.8);
+}
+
+form .row:last-child {
+    margin-left: 110px;
+}
+
+input[type=submit] {
+    font-weight: 700;
+    font-size: 100%;
+    width: 20%;
+    text-align: center;
+}
+
+
+/* ---------------End Section-ConTract - Form------------------ */
+
+
+/* --------------- Footer------------------ */
+
+footer {
+    text-align: center;
+    background-color: #5a5a5a;
+    color: white;
+    padding: 20px;
+}
+
+
+/* ---------------End footer------------------ */
